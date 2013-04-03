@@ -11,8 +11,10 @@ dependencies = ['docopt', 'termcolor']
 setup(
     name='racks',
     version=".".join(str(x) for x in __version__),
-    description='rack on rack for stack graphs',
+    description='racks for stack graphs',
+    long_description=open('README.rst').read(),
     url='http://www.github.com/myusuf3/racks',
+    license="MIT License",
     author='Mahdi Yusuf',
     author_email='yusuf.mahdi@gmail.com',
     install_requires=dependencies,
