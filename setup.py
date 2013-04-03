@@ -1,5 +1,9 @@
 from racks import __version__
 
+import os
+import sys
+
+
 try:
     from setuptools import setup
 except ImportError:
@@ -7,6 +11,13 @@ except ImportError:
 
 dependencies = ['docopt', 'termcolor']
 
+
+def publish():
+    os.system("python setup.py sdist upload")
+
+if sys.argv[-1] == "publish":
+    publish()
+    sys.exit()
 
 setup(
     name='racks',
